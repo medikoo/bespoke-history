@@ -1,5 +1,5 @@
 # bespoke-history
-## Url routing for [Bespoke.js](https://github.com/markdalgleish/bespoke.js)
+## URL `window.history` based router for [Bespoke.js](https://github.com/markdalgleish/bespoke.js)
 
 Works in similar way as [bespoke-hash](https://github.com/markdalgleish/bespoke-hash) but uses `window.history` instead
 
@@ -14,7 +14,7 @@ bespoke.from(selector, {
 
 ```
 
-By default it will route urls against '/', but you can configure root path:
+By default it will route urls against `/`, but you can configure root path:
 
 ```javascript
 bespoke.from(selector, {
