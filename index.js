@@ -1,8 +1,9 @@
 'use strict';
 
 module.exports = function (deck/*, options*/) {
-	var update, activateSlide, options = Object(arguments[1])
-	  , root = options.root || '/';
+	var options = Object(arguments[1]), root = options.root || '/'
+	  , urlSearch = location.search
+	  , update, activateSlide;
 
 	activateSlide = function (index) {
 		if (index === deck.slide()) return;
@@ -29,7 +30,7 @@ module.exports = function (deck/*, options*/) {
 			var slideName = e.slide.getAttribute('data-bespoke-id') ||
 				String(e.index + 1);
 			history.pushState({}, '', root +
-				((slideName === first) ? '' : (slideName + '/')));
+				((slideName === first) ? '' : (slideName + '/')) + urlSearch);
 		});
 
 		window.addEventListener('popstate', update);
