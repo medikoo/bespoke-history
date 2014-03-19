@@ -1,0 +1,22 @@
+{
+  "name": "bespoke-history",
+  "version": "0.1.0",
+  "description": "URL (window.history based) router for Bespoke presentation engine",
+  "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
+  "keywords": [
+    "bespoke",
+    "slides",
+    "presentation",
+    "history",
+    "routed",
+    "url"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/medikoo/bespoke-history.git"
+  },
+  "peerDependencies": {
+    "bespoke": "0.4.x"
+  },
+  "license": "MIT"
+}
