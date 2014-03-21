@@ -1,5 +1,5 @@
 # bespoke-history
-## URL `window.history` based router for [Bespoke.js](https://github.com/markdalgleish/bespoke.js)
+## [Bespoke.js](https://github.com/markdalgleish/bespoke.js) `window.history` based URL router
 
 Works in similar way as [bespoke-hash](https://github.com/markdalgleish/bespoke-hash) but uses `window.history` instead
 
