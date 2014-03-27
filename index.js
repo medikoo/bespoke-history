@@ -2,7 +2,6 @@
 
 module.exports = function (deck/*, options*/) {
 	var options = Object(arguments[1]), root = options.root || '/'
-	  , urlSearch = location.search
 	  , update, activateSlide;
 
 	activateSlide = function (index) {
@@ -27,7 +26,8 @@ module.exports = function (deck/*, options*/) {
 		update();
 		var first = deck.slides[0].getAttribute('data-bespoke-id') || '1';
 		deck.on('activate', function (e) {
-			var slideName = e.slide.getAttribute('data-bespoke-id') ||
+			var urlSearch = location.search
+			  , slideName = e.slide.getAttribute('data-bespoke-id') ||
 				String(e.index + 1);
 			history.pushState({}, '', root +
 				((slideName === first) ? '' : (slideName + '/')) + urlSearch);
