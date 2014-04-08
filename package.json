@@ -1,7 +1,7 @@
 {
   "name": "bespoke-history",
   "version": "0.1.0",
-  "description": "URL (window.history based) router for Bespoke presentation engine",
+  "description": "Bespoke.js `window.history` based URL router",
   "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
   "keywords": [
     "bespoke",
