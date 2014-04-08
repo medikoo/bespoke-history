@@ -14,7 +14,7 @@ bespoke.from(selector, {
 
 ```
 
-By default it will route urls against `/`, but you can configure root path:
+By default it will route urls against `/`, but you can customize root path:
 
 ```javascript
 bespoke.from(selector, {
