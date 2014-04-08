@@ -1,8 +1,14 @@
 'use strict';
 
 module.exports = function (deck/*, options*/) {
-	var options = Object(arguments[1]), root = options.root || '/'
-	  , update, activateSlide;
+	var options = arguments[1], root, update, activateSlide;
+
+	if (typeof options === 'string') {
+		root = options;
+	} else {
+		options = Object(options);
+		root = options.root || '/';
+	}
 
 	activateSlide = function (index) {
 		if (index === deck.slide()) return;
