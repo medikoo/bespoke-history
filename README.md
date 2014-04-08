@@ -18,7 +18,7 @@ By default it will route urls against `/`, but you can configure root path:
 
 ```javascript
 bespoke.from(selector, {
-  history: { root: '/my-custom-root/' }
+  history: '/my-custom-root/'
 });
 
 ```
