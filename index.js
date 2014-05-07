@@ -20,8 +20,16 @@ module.exports = function (deck/*, options*/) {
 
 		if (!id) return;
 		if (isNaN(id)) {
-			deck.slides.forEach(function (slide, i) {
-				if (slide.getAttribute('data-bespoke-id') === id) activateSlide(i);
+			deck.slides.some(function (slide, i) {
+				if (slide.getAttribute('data-bespoke-id') === id) {
+					activateSlide(i);
+					return true;
+				}
+				if (slide.id === id) {
+					activateSlide(i);
+					return true;
+				}
+				return false;
 			});
 			return;
 		}
@@ -33,8 +41,7 @@ module.exports = function (deck/*, options*/) {
 		var first = deck.slides[0].getAttribute('data-bespoke-id') || '1';
 		deck.on('activate', function (e) {
 			var urlSearch = location.search
-			  , slideName = e.slide.getAttribute('data-bespoke-id') ||
-				String(e.index + 1);
+			  , slideName = e.slide.getAttribute('data-bespoke-id') || e.slide.id || String(e.index + 1);
 			history.pushState({}, '', root +
 				((slideName === first) ? '' : (slideName + '/')) + urlSearch);
 		});
