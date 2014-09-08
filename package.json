@@ -1,6 +1,6 @@
 {
   "name": "bespoke-history",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Bespoke.js `window.history` based URL router",
   "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
   "keywords": [
@@ -16,7 +16,7 @@
     "url": "git://github.com/medikoo/bespoke-history.git"
   },
   "peerDependencies": {
-    "bespoke": "0.4.x"
+    "bespoke": "1"
   },
   "license": "MIT"
 }
