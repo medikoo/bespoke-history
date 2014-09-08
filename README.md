@@ -6,20 +6,19 @@ Works in similar way as [bespoke-hash](https://github.com/markdalgleish/bespoke-
 ### Usage
 
 ```javascript
-bespoke.plugins.history = require('bespoke-history');
-
-bespoke.from(selector, {
-  history: true
-});
+var history = require('bespoke-history');
+bespoke.from(selector, [
+  history()
+]);
 
 ```
 
 By default it will route urls against `/`, but you can customize root path:
 
 ```javascript
-bespoke.from(selector, {
-  history: '/my-custom-root/'
-});
+bespoke.from(selector, [
+  history('/my-custom-root/')
+]);
 
 ```
 
