@@ -19,5 +19,9 @@
   "peerDependencies": {
     "bespoke": "1"
   },
+  "scripts": {
+    "lint": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --no-cache --no-stream",
+    "lint-console": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --watch"
+  },
   "license": "MIT"
 }
