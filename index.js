@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function (/* options*/) {
-	var options = arguments[1], root;
+	var options = arguments[0], root;
 
 	if (typeof options === 'string') {
 		root = options;
